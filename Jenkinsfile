@@ -1,4 +1,4 @@
-pipeline {
+dpipeline {
     agent any
 
     triggers {
@@ -25,7 +25,7 @@ pipeline {
     post {
         always {
             emailext(
-                to: 'YOUR_EMAIL@gmail.com',
+                to: 'dhanyasathasivam@gmail.com',
                 subject: "Jenkins Build ${currentBuild.currentResult}: ${env.JOB_NAME}",
                 body: """
 Hello,
